@@ -1,0 +1,27 @@
+
+1. 
+To begin the process of the transation I would first start with begin and then insert the information.If I wanted
+to make the transition offical then I would use commit, otherwise I would use rollback.
+
+
+2. 
+If the delete statement does not contain a where clause then it will
+delete all the rows from the table.
+
+3. 
+Add a new record in the salespeople table Liz Montabatten Salesid,lastname, firstname,
+initials, salary, and supervisor. 
+
+This transation did not changed the salary since the lastname and firstname
+in the DB is switched.
+
+5. 
+
+The table Monarchs does not exist.
+
+
+6. 
+
+update members
+set city  = "Alvarez"
+where region = 'Tx';

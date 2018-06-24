@@ -1,0 +1,26 @@
+
+1. 
+SELECT lastname as "California" FROM members WHERE region = "CA" UNION SELECT studioname FROM Studios WHERE region = "CA";
+
+
+2. 
+
+SELECT memberid, birthday FROM members  WHERE (region = "VT") and (birthday < ALL(SELECT birthday FROM members WHERE region = "NY"));
+
+
+3. 
+
+ select tracktitle from tracks tr join titles using(titleID) join artists a using(artistid) where a.entrydate > 2003-10-01;
+
+
+4. 
+
+SELECT tr.tracktitle FROM tracks tr WHERE (tr.titleID IN (SELECT titleID FROM titles WHERE (titles.artistID IN (select artistID FROM artists A WHERE A.artistID IN (SELECT artistid FROM artists WHERE entrydate > 2003-10-01)))));
+
+
+5.
+
+SELECT A.artistName FROM artists A WHERE (A.artistID IN 
+(SELECT artistID FROM titles WHERE (titles.studioID IN 
+(select studioID FROM studios S WHERE studioid IN 
+(SELECT studioID FROM studios WHERE studioname = "Pacific Rim")))));

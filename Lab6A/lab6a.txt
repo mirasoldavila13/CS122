@@ -1,0 +1,53 @@
+
+
+1. 
+
+Correlated subqueries are inner queries that are dependent by the outer query. 
+Where as other subqueries they are a independent query and capble of running themselves.
+
+2.
+
+The difference between IN and EXISTS is that IN tests if the expression matches any fields that were
+in the list and EXISTS checks if the data in the subquery is either true or false.
+
+3. 
+The reason why the problem is incorrect is because this is a list of subqueries.
+
+
+
+4. 
+
+a. The output would be:
+
+	Make		Model
+	Lincoln		Town Car
+	Ford		Crown Victoria
+
+
+
+b. 	The output would be:
+	
+	Make		Model
+	Toyota		Corolla
+	Toyota		Prius
+
+
+
+
+5. 
+
+list the lastname of the salespeople whose are represented by both members and studios.
+
+
+6. 
+List the artist with the artistnames that begins with "The"
+
+7.
+
+Find all the artistnames which are represented by members whose memberid are greater than 2.
+
+8.
+
+select artistname from artists where artistid IN
+(select artistid from xrefartistsmembers where memberid IN
+(select memberid from members where gender = "f"));

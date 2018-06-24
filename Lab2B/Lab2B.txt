@@ -1,0 +1,21 @@
+Lab 2 Part B
+   
+1.Find the LastName and intials of the members from the salespeople.
+
+2. Find the TrackTitle in ascending order from their tracks.
+
+3.Find the first name from the members whos first letter of their first name starts after "M".
+
+4.Find the Lastname of all members that don't have an email address.
+
+5.Find the last names of the members who's firstname is Roberto.
+
+6. SELECT LastName, MemberID FROM Members WHERE SalesID != "2";
+
+7. SELECT Title FROM Titles WHERE Genre = "alternative";
+
+8.SELECT Title FROM Titles WHERE Genre != "jazz";
+
+9. SELECT DISTINCT Genre, Title FROM Titles;
+
+10.SELECT Region,City, Gender From Members WHERE City LIKE 'A%' AND Gender = "M";

@@ -1,0 +1,33 @@
+1.
+It is not an error to use an aggregate function in a having clause. The having clause filters after aggregation 
+unlike the where clause filters before aggregation.
+
+
+2.
+
+Ford,3
+BMW,2
+
+
+
+3. 
+The query list the current day of the week from  11 years ago.
+
+
+4. 
+
+List the titleid and the number of tracks by grouping all the tracks that belong to their own specific titleid.
+
+
+5. 
+
+Show the number of artists whos artistname begins with "The".
+
+
+6. 
+
+List the salespeople with the number of titles each studio represents.
+
+7.
+
+select count(DISTINCT salesid) from salespeople join studios using(salesid);

@@ -1,0 +1,15 @@
+1.
+a The type of join condition the query is using is named column join.
+
+b. The type of join condition the query is using is named cross join.
+
+2.This query list the lastname and memberID from each member and the initials from salespeople.
+
+3.This query list the genre and title by the alphabetical order of genre.  
+
+4. This query list the TrackTitle and title who have recorded at the studio MakeTrax.
+
+5. This query is using a join condition to match all fields that members and salespeople have in common.
+
+6. SELECT DISTINCT m.firstname, m.lastname FROM members M JOIN xrefartistsmembers x USING(memberID) JOIN artists a using(artistID) 
+WHERE a.ArtistID = 10 ORDER BY m.lastname Desc;

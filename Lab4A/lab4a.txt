@@ -1,0 +1,37 @@
+1) An outer join matches the records in both of the tables even when there is nothing in common by using NULL. 
+Inter join only matches the records that match in both of the tables.
+
+
+2) Self join has two different cases, typical case and non-typical case. Typical case is within the same table the foriegn key refereces
+a primary key from the table.
+Non-typical case is when the programmer wants to find pairs of information within the same table.
+
+
+
+3)  The table aliases is needed in self join for MYSQL won't get confused. By giving the tables
+an aliases and giving the tables a common attricute name.
+
+
+
+4) I would use an outer join condition by using either the right or left join.
+
+5)This query is incorrect because m.lastname is corresponding into the salespeople table where there isn't a salespeople with the last name "Sanders"
+The query would have to replace "M.Lastname != "Sanders";" with "S.Lastname != "Williams";"
+
+ 
+
+6) In the first query the artistname that appeared where "The kicks" and "21 West Elm" the members who was not born in the 1960 was Frank Payne and Bonnie Taft.In the second query the results where the artistname appeared but Frank Payne and Bonnie Taft did not appear.
+
+
+7) This query is incorrect because the student needed to input salesID infront of email, in order to find the salesID and email.
+
+8) These two queries return the same record because they both have the same records.
+
+9) List the genre and titles in alphabetically order by genre.
+10) This query will return the genre and title and the genre in alphabetical order.
+11) Both of the tables didn't have any records in common and returned NULL.
+12) This query returned the salesId, Lastname and the studioname. If there is no
+StudioID and studio name it will return none.
+13) The query returns the salesID  from the region of "CA" and the studio NULL.
+
+14) 

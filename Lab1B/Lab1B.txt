@@ -1,0 +1,38 @@
+1. 
+a)A Database Management Systems is a system that provides efficient data that is realiable
+and secured. The DMS can handle failures and can recover the data that is stored within. 
+
+b)Three common Database Management Systems is MySQL, PostrgreSQL, and Oracle.
+
+2.Schemas
+
+
+3.structure is defined by how the data is organized according the database model and the set of rules.
+
+4.The data is stored in a permanent storage. If the application fails, the data will stay intact.
+
+5. SQL is "nonprocedurl" because the programmer can tell what it wants unlike for java where
+it requires to solve a problem to accomplish a task. 
+
+
+6.The table that repesents exactly on human being is Members
+
+7.The table you would need to use is Studios.
+
+8. The table that has the names of the titles stored is Titles.
+
+9. In which table are the lengths of the songs stored?
+The table that stored the lengths of the songs are Tracks.
+
+10.Yes, the commond field is TitleID.
+
+
+11. It means that the record was recorded at that specific studio using the StudioID that was given.
+
+
+12. The Members table contains a composite primary key (MemberID) and a foreign key (SalesID). By having the members personal information, one could distinguish who their salesperson is using their salesID
+
+
+13. You can get the information in the Titles table by examining the StudioID and Titles field.
+
+14. The reason why we need all three tables is to narrow down the specific information we want to find. Each table has its own set of data that can be used to distinguish what the programmer is seeking information on.

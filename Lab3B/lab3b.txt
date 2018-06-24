@@ -1,0 +1,26 @@
+1.
+select s1.salesid, s2.firstname, s2.lastname from studios s1 join
+salespeople s2 using(salesID);
+
+
+2.select s.salesId, s.lastname, m.birthday from salespeople s JOIN members m USING(salesID) WHERE m.birthday LIKE '____-07-__';
+
+
+
+3.select s.studioname, t.genre from studios s join titles t where t.genre != "jazz";
+
+
+4. SELECT ST.Studioname, T.Title FROM Studios ST JOIN Titles T USING(StudioID);
+
+5a. 
+select tr.tracktitle, t.title, t.artistID from tracks tr join titles t
+using(TitleID) join artists a using(ArtistID) WHERE artistID = "3";
+
+SELECT DISTINCT m.firstname, m.lastname FROM members M JOIN xrefartistsmembers x USING(memberID) WHERE memberID = "3" 
+
+
+5b) 
+select tr.tracktitle, t.title, t.artistID from tracks tr join titles t
+using(TitleID) join artists a using(ArtistID) WHERE artistID != "3";
+
+6. Select firstname, lastname,IF(WorkPhone IS NOT NULL, WorkPhone, HomePhone) FROM Members;

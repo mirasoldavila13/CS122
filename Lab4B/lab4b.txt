@@ -1,0 +1,32 @@
+1) 
+select DISTINCT a.artistname, a.artistID, a.webaddress from artists a left join titles using(artistid) WHERE webaddress IS NOT NULL;
+
+
+
+2) select s1.firstname as Subordinate, s2.salesID as Supervisor from salespeople s1 join salespeople s2 on (s1.supervisor = s2.salesid);
+
+3) 
+a. select s1.firstname as Subordinate, s2.salesID as Supervisor from salespeople s1 join salespeople s2 on (s1.supervisor = s2.salesid)
+WHERE s1.initials != 'bbb';
+
+b. The reason why bob didn't appear in this queary is because he already
+has a subordinates.
+
+c. 
+
+
+4) select s.salesID, m.memberID AS Client from Salespeople s
+left join members m using(salesID); 
+
+
+5) Select DISTINCT m.firstname, m.lastname, m.region from members m
+JOIN salespeople WHERE Region != 'CA';
+
+6) a)
+Select DISTINCT m.firstname, m.lastname, m.region from members m
+JOIN salespeople WHERE Region = 'CA';
+
+b) The difference of the last query is there was sales people who represented
+members that were not located in california. Where this query the results 
+where only one salespeople didn't represent any members that were located in
+california.

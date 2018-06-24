@@ -1,0 +1,106 @@
+
+1. 
+DELETE FROM ARTISTS
+WHERE ARTISTID= (SELECT A.ARTISTID FROM ARTISTS  A WHERE (ARTISTID IN (SELECT ARTISTID FROM TITLES WHERE GENRE != "JAZZ")));
+
+
+
+
+b) 
+I must require consistency in the database by changing the artistid in the titles table with any of the other artistid.
+
+2. 
+
+insert into members values( '11',"Sarah", "Aguas","1165 San Luis Rd", "Walker", "CA", '25641', "USA", '4569852153', "NULL", "sarahaguas123.org", "F", '1995-12-13', '2');
+
+update xrefartistsmembers
+set memberid = (select memberid from members where memberid = "11")
+where artistid = (select artistid from artists where artistname = "Sonata");
+
+3. 
+
+select 
+
+
+
+
+
+4)
+create table Products(
+	ItemNumber 	INT PRIMARY KEY AUTO_INCREMENT,
+	ItemName	VARCHAR(25),
+ 	Price		FLOAT(12,2), 
+	SupplierID 	CHAR(2)
+);
+
+INSERT INTO PRODUCTS VALUES (1,"Women's Heels", 69.99, 1);
+INSERT INTO PRODUCTS VALUES(2,"Camera", 129.57, 2);
+INSERT INTO PRODUCTS VALUES(3,"Stove", 1200.99, 3);
+INSERT INTO PRODUCTS VALUES(4,"Laptop", 800.99, 1);
+INSERT INTO PRODUCTS VALUES(5,"Men's Coat", 40.25, 3);
+
+5)
+
+Create table Suppliers(
+SupplierID	INT PRIMARY KEY AUTO_INCREMENT,
+SupplierName	VARCHAR(25),
+ContactPhone	CHAR(10)
+);
+
+INSERT INTO SUPPLIERS VALUES(1,"Tyrone Chairs", '4595641516');
+INSERT INTO SUPPLIERS VALUES(2,"Monster Heels", '4789655256');
+INSERT INTO SUPPLIERS VALUES(3,"Charle Pops", '255954357');
+
+6. 
+select supplierid,Suppliername, count(*) from products left join suppliers using(supplierID) GROUP BY SUPPLIERID;
+
+7. 
+a)
+
+ALTER TABLE PRODUCTS
+ADD CONSTRAINT SalesPrice
+UNIQUE (Price);
+
+
+b)
+
+ALTER TABLE PRODUCTS
+ADD COLUMN Description VARCHAR(25);
+
+UPDATE PRODUCTS
+SET DESCRIPTION = "Women's shoes"
+WHERE ItemNUMBER = "1";
+
+UPDATE PRODUCTS
+SET DESCRIPTION = "Takes HD pictures"
+WHERE ItemNUMBER = "2";
+
+UPDATE PRODUCTS
+SET DESCRIPTION = "Electric stove"
+WHERE ItemNUMBER = "3";
+
+UPDATE PRODUCTS
+SET DESCRIPTION = "Gamers laptop"
+WHERE ItemNUMBER = "4";
+
+UPDATE PRODUCTS
+SET DESCRIPTION = "Style for winter"
+WHERE ItemNUMBER = "5";
+
+c) 
+
+ALTER TABLE PRODUCTS
+CHANGE ItemNumber ProductID VARCHAR(25);
+
+
+8. 
+a)
+
+DELETE FROM SUPPLIERS
+WHERE SUPPLIERID = "1";
+
+b) 
+UPDATE PRODUCTS
+SET SUPPLIERID = "2"
+WHERE SUPPLIERID = "1";
+

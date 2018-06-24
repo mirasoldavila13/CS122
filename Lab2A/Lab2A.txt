@@ -1,0 +1,42 @@
+Lab 2 Part A
+
+1.The primary key for the Studios table is StudioID.
+
+2.The reason why LastName can't possibly be the primary key is because the primary key needs to be unique.
+For an example if they are members that have the identical lastname then that can't uniquely distinguish between them. 
+
+3. The foreign key in the Tracks table that references the title table is TitleID. We know that TitleID is the
+foreign key sinces it's being defined in the Tracks table, Although it refers as the primary key that distinguishes 
+all the records in the Titles table.
+
+
+4. The reason why is since  both of the members and artists table doesn't have one primary key that joins them together.
+We would need to have three separate tables to match members to artists to combine them as one primary key in the 
+XrefArtistsMembers table. By doing that will help the programmer distinguish the specific records they want.
+
+
+5a.The primary key for the XRefArtistsMembers table is the combination of ArtistID and MemberID.
+
+5b. The relationship between the Artist table and the Members table is unique because they have many relationships.
+If you had to compare both the Artist and Titles table where they only have one relationship. 
+ 
+
+6a. Yes, we can add a new record to the Salespeople table with the following information that was given.
+
+
+6b. No, we cannot add a new record to the Salespeople table with the following information that was given. The reason is 
+that there is a record already stored in the Salespeople table with the sames SalesID.
+
+
+7. (10 pts) Consider this SQL query:
+    SELECT (NULL IS NOT NULL) != (NULL = (NOT NULL));
+Why does this query return NULL?  Answer with a simplified proof.
+
+SELECT (NULL IS NOT NULL))     !=     (NULL = (NOT NULL);
+
+NULL                           !=     ( NULL = NULL)
+
+NULL                           !=    NULL
+
+NULL
+

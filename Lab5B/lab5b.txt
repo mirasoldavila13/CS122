@@ -1,0 +1,19 @@
+1. 
+select count(firstname) from members join xrefartistsmembers using(memberid) join artists using(artistid);
+
+
+2. 
+
+select genre, count(*) from titles t group by genre having count(*) >2;
+
+3.
+select avg(lengthseconds), genre, title from tracks join titles using(titleid) group by title;
+
+
+4. 
+select genre, count(title) from genre left join titles using(genre) group by genre;
+
+5. 
+select count(DISTINCT artistid) from artists join titles using(artistid)  where genre = "Alternative";
+
+
